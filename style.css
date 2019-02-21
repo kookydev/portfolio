@@ -18,6 +18,17 @@ a {
     text-decoration: none;
 }
 
+#avatar {
+    height: 50vh;
+    max-width: 50vw;
+    grid-area: avatar;
+
+}
+
+.rock-dude {
+    align-items: flex-end;
+}
+
 .content-wrapper {
     display: grid;
     grid-template-areas: 
@@ -164,9 +175,7 @@ a {
     align-items: center;
     justify-content: center;
 }
-.rock-dude {
 
-}
 
 .work  {
     height: 100vh;
@@ -180,6 +189,53 @@ a {
     width: 100%;
     background: #000;
     grid-area: footer;
+}
+
+.speech-bubble {
+    width: 100%;
+    height: 100%;
+}
+
+.inner {
+    background: whitesmoke;
+}
+
+#speechspike {
+    width: 100%;
+}
+
+#topleft {
+    grid-area: topleft;
+}
+#topmid {
+    grid-area: topmid;
+}
+#topright {
+    grid-area: topright;
+}
+#midleft {
+    grid-area: midleft;
+    justify-self: flex-start;
+    min-width: 10vw !important;    
+}
+#middle {
+    grid-area: middle;
+    height: 100%;
+    width: 1fr;
+}
+#midright {
+    grid-area: midright;
+}
+#botleft {
+    grid-area: botleft;
+}
+#botmid {
+    grid-area: botmid;
+    height: 10vw;
+    min-width: 1fr;
+}
+#botright {
+    grid-area: botright;
 }
 
 @keyframes logo-in {
@@ -222,6 +278,17 @@ a {
 }
 .nav-logo {
     margin: 2px;
+}
+.rock-dude {
+    display: grid;
+    grid-template-areas: 
+    "avatar speechspike topleft topmid topright"
+    "avatar .  midleft  middle midright"
+    "avatar . botleft botmid botright";
+    grid-template-rows: 10vw 1fr 10vw;
+    grid-template-columns: auto 10vw 10vw 1fr 10vw;
+    width: 90vw;
+    min-height: 50vh;
 }
 }
 
