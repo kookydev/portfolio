@@ -50,6 +50,7 @@ a {
     height: 8vh;
     width: auto;
     min-width: 32px;
+    margin: 4px;
 }
 
 .nav-logo-outer {
@@ -59,11 +60,11 @@ a {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    /* border-bottom: 1px solid #777777 */
 }
 
 #logo1 {
     display: block;
+    order: -1;
 }
 #logo2 {
     min-width: 64px;
@@ -82,15 +83,15 @@ a {
 }
 #logo6 {
     display: block;
+    order: 1;
 }
-
-
 
 .cursor {
     height: 8vh;
     width: auto;
     transform: translateY(0.3vh);
     animation: blink 1s linear infinite;
+    order: 1;
 }
 
 @keyframes blink {
@@ -158,6 +159,13 @@ a {
     background-image: linear-gradient(to bottom, #f02727 0%, #ffe600 100%);
     grid-area: about;
     /* border-radius: 15px; */
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+.rock-dude {
+
 }
 
 .work  {
@@ -186,7 +194,7 @@ a {
     }
 }
 
-@media only screen and (min-width: 990px) {
+@media only screen and (min-width: 730px) {
     .nav {
     background: #4b4a4a;
     width: 100%;
@@ -212,4 +220,13 @@ a {
 .nav-list-void {
     border: none;
 }
+.nav-logo {
+    margin: 2px;
+}
+}
+
+@media only screen and (min-width: 990px) {
+    .nav-logo {
+        margin: 4px;
+    }
 }
