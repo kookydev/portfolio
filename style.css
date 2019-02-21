@@ -180,7 +180,7 @@ a {
     }
 }
 
-@keyframes logo-in {
+@keyframes logo-out {
     to {
         display: none;
     }
