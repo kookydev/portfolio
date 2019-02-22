@@ -4,6 +4,8 @@ navtrigger.addEventListener("click", () => {
   menuAnimation();
 });
 
+let likes = {Name: ["dogs", "people",]}
+
 const menuAnimation = () => {
   console.log(navtrigger);
   let logo1 = document.getElementById("logo1");
