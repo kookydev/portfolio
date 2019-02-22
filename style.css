@@ -57,7 +57,8 @@ a {
     align-items: center;
     justify-content: center;
     grid-area: nav;
-    box-shadow: 5px 5px 20px #1b1b1ba9
+    box-shadow: 5px 5px 20px #1b1b1ba9;
+    z-index: 1000;
 }
 
 /* .nav-active {
@@ -181,7 +182,7 @@ a {
     /* border-radius: 15px; */
     display: flex;
     flex-wrap: nowrap;
-    align-items: flex-end;
+    align-items: flex-start;
     justify-content: center;
     font-family: 'VT323', monospace;
     font-size: 1.8em;
@@ -210,7 +211,72 @@ a {
     background-image: linear-gradient(to top, #f08127 0%, #ffe600 100%);
     grid-area: work;
     /* border-radius: 15px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5,1fr);
+    grid-gap: 1em;
+    width: 95%;
+    height: 80%;
+    margin-top: 10vh;
+}
+
+.work-grid-inner {
+    height: 100%;
+    width: 100%;
+    background: #4b4a4a;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* .work-grid-inner::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    transform: translate(50%, 50%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%,rgba(16,255,0,0.4) 50%,rgba(0,0,0,0.1));
+} */
+
+.tilt-left {
+    transform: rotate(-2deg);
+}
+
+.tilt-right{
+    transform: rotate(2deg);
+}
+
+.work-grid-inner:hover {
+    transform: scale(1.05) rotate(0deg);
+    box-shadow: 0px 0px 20px 5px #0e0e0e8a;
+    z-index: 50;
+}
+
+#work-inner1 {
+    grid-area: 1 / 1 / span 2 / span 3;
+}
+#work-inner2 {
+    grid-area: 1 / 4 / span 2 / span 2;
+}
+#work-inner3 {
+    grid-area: 1 / 6 / span 3 / span 2;
+}
+#work-inner4 {
+    grid-area: 3 / 1 / span 3 / span 2;
+}
+#work-inner5 {
+    grid-area: 3 / 3 / span 1 / span 3;
+}
+#work-inner6 {
+    grid-area: 4 / 3 / span 2 / span 2;
+}
+#work-inner7 {
+    grid-area: 4 / 5 / span 2 / span 3;
+}
+
 .footer {
     height: 10vh;
     width: 100%;
@@ -316,7 +382,7 @@ a {
     grid-template-columns: auto 10vw 10vw 1fr 10vw;
     width: 98vw;
     min-height: 70vh;
-    margin-bottom: 5vh;
+    margin-top: 15vh;
 }
 }
 

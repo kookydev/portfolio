@@ -16,7 +16,7 @@ const menuAnimation = () => {
   let logo6 = document.getElementById("logo6");
   let cursor = document.getElementById("cursor");
   let windowWidth = document.documentElement.clientWidth;
-  let timeout = Math.random() * 500;
+  let timeout = Math.random() * 400;
   if (windowWidth < 2000) {
     if (!menuCollapsed) {
       setTimeout(() => {
@@ -24,20 +24,20 @@ const menuAnimation = () => {
       }, timeout);
       setTimeout(() => {
         logo5.style.display = "none";
-      }, (timeout += Math.random() * 400 + 200));
+      }, (timeout += Math.random() * 200 + 200));
       setTimeout(() => {
         logo4.style.display = "none";
-      }, (timeout += Math.random() * 400 + 200));
+      }, (timeout += Math.random() * 200 + 200));
       setTimeout(() => {
         logo3.style.display = "none";
-      }, (timeout += Math.random() * 400 + 200));
+      }, (timeout += Math.random() * 200 + 200));
       setTimeout(() => {
         cursor.style.order = -1;
-      }, (timeout += Math.random() * 400 + 200));
+      }, (timeout += Math.random() * 200 + 200));
       setTimeout(() => {
         logo1.style.display = "none";
         logo6.style.display = "none";
-      }, (timeout += Math.random() * 400 + 200));
+      }, (timeout += Math.random() * 200 + 200));
 
       menuCollapsed = true;
     } else {
