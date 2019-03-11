@@ -1,7 +1,3 @@
-
-
-
-
 let menuCollapsed = false;
 let nav = document.getElementById("nav");
 
@@ -11,17 +7,19 @@ navtrigger.addEventListener("click", () => {
   menuAnimation();
 });
 
-window.onscroll = function() {scrollTrigger()};
+// window.onscroll = function () {
+//   scrollTrigger()
+// };
 let navClassCheck = nav.classList.contains("nav-collapsed");
 console.log(navClassCheck);
-scrollTrigger = () => {
-  if (document.documentElement.scrollTop > 50 && document.documentElement.scrollTop < 55) {
-      menuAnimation()
 
-}}
+window.addEventListener("scroll", () => {
+  let scrolled = window.scrollY
+  scrolled > 90 ? scrollTrigger("close") : scrollTrigger("open")
+})
 
 const menuAnimation = () => {
-  
+
   let logo1 = document.getElementById("logo1");
   let logo2 = document.getElementById("logo2");
   let logo3 = document.getElementById("logo3");
@@ -56,9 +54,9 @@ const menuAnimation = () => {
       setTimeout(() => {
         menuCollapsed = true;
       }, (timeout += Math.random() * 200 + 100));
-      
+
     } else {
-      
+
       nav.classList.toggle("nav-collapsed");
       setTimeout(() => {
         logo1.style.display = "block";
@@ -70,7 +68,7 @@ const menuAnimation = () => {
       setTimeout(() => {
         logo3.style.display = "block";
       }, (timeout += Math.random() * 400 + 100));
-      
+
       setTimeout(() => {
         logo4.style.display = "block";
       }, (timeout += Math.random() * 400 + 100));
@@ -80,7 +78,7 @@ const menuAnimation = () => {
       setTimeout(() => {
         menuCollapsed = false;
       }, (timeout += Math.random() * 200 + 100));
-      
+
     }
   }
 };

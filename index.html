@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touchwidth-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
@@ -19,7 +20,9 @@
 
 <body>
   <div id="nav" class="nav">
+    <input type="checkbox" id="menu-close" class="toggle">
     <a id="toggle" class="nav-logo-outer">
+
       <svg class="nav-logo" id="logo1" width="4" height="9" viewBox="0 0 4 9" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect x="3" width="1" height="1.00111" fill="#F5F5F5" />
         <rect x="2" width="1" height="1.00111" fill="#F5F5F5" />
@@ -214,13 +217,14 @@
     </div>
     <div id="work" class="work">
       <div class="work-grid">
-        <div class="work-grid-inner tilt-left" id="work-inner1"></div>
-        <div class="work-grid-inner tilt-right" id="work-inner2"></div>
-        <div class="work-grid-inner tilt-left" id="work-inner3"></div>
-        <div class="work-grid-inner tilt-right" id="work-inner4"></div>
-        <div class="work-grid-inner" id="work-inner5"></div>
-        <div class="work-grid-inner tilt-left" id="work-inner6"></div>
-        <div class="work-grid-inner tilt-right" id="work-inner7"></div>
+        <div class="nes-container is-rounded work-grid-inner tilt-left" id="work-inner1">
+        </div>
+        <div class="nes-container is-rounded work-grid-inner tilt-right" id="work-inner2"></div>
+        <div class="nes-container is-rounded work-grid-inner tilt-left" id="work-inner3"></div>
+        <div class="nes-container is-rounded work-grid-inner tilt-right" id="work-inner4"></div>
+        <div class="nes-container is-rounded work-grid-inner" id="work-inner5"></div>
+        <div class="nes-container is-rounded work-grid-inner tilt-left" id="work-inner6"></div>
+        <div class="nes-container is-rounded work-grid-inner tilt-right" id="work-inner7"></div>
 
       </div>
     </div>
