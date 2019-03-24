@@ -1,236 +1,729 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://unpkg.com/nes.css@latest/css/nes.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./images/apple-touchwidth-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./images/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="./images/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touchwidth-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png" />
-  <link rel="manifest" href="./images/site.webmanifest" />
-  <link rel="mask-icon" href="./images/safari-pinned-tab.svg" color="#5bbad5" />
-  <meta name="msapplication-TileColor" content="#da532c" />
-  <meta name="theme-color" content="#ffffff" />
+    <title>KookyDev</title>
+  </head>
 
-  <title>KookyDev</title>
-</head>
+  <body>
+    <div id="nav" class="nav">
+      <label for="nav-toggle" class="nav-logo-outer">
+        <svg
+          class="nav-logo"
+          id="logo1"
+          width="4"
+          height="9"
+          viewBox="0 0 4 9"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect x="3" width="1" height="1.00111" fill="#F5F5F5" />
+          <rect x="2" width="1" height="1.00111" fill="#F5F5F5" />
+          <rect x="1" y="1.0011" width="1" height="1.00111" fill="#F5F5F5" />
+          <rect x="1" y="2.0022" width="1" height="1.00111" fill="#F5F5F5" />
+          <rect x="1" y="3.0033" width="1" height="1.00111" fill="#F5F5F5" />
+          <rect y="4.00439" width="1" height="1.00111" fill="#F5F5F5" />
+          <rect x="1" y="5.00562" width="1" height="1.00111" fill="#F5F5F5" />
+          <rect x="1" y="6.00671" width="1" height="1.00111" fill="#F5F5F5" />
+          <rect x="1" y="6.9978" width="1" height="1.00111" fill="#F5F5F5" />
+          <rect x="2" y="7.9989" width="1" height="1.00111" fill="#F5F5F5" />
+          <rect x="3" y="7.9989" width="1" height="1.00111" fill="#F5F5F5" />
+        </svg>
+        <svg
+          class="nav-logo"
+          id="logo2"
+          width="8"
+          height="9"
+          viewBox="0 0 8 9"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect x="2" y="1" width="1" height="1.00111" fill="#D0A279" />
+          <rect x="3" y="1" width="1" height="1.00111" fill="#D0A279" />
+          <rect x="4" y="1" width="1" height="1.00111" fill="#D0A279" />
+          <rect x="1" y="2.0011" width="1" height="1.00111" fill="#D0A279" />
+          <rect y="3.0022" width="1" height="1.00111" fill="#D0A279" />
+          <rect x="1" y="3.0022" width="1" height="1.00111" fill="#D0A279" />
+          <rect x="2" y="3.0022" width="1" height="1.00111" fill="#D0A279" />
+          <rect x="3" y="3.0022" width="1" height="1.00111" fill="#D0A279" />
+          <rect x="4" y="3.0022" width="1" height="1.00111" fill="#D0A279" />
+          <rect x="5" y="3.0022" width="1" height="1.00111" fill="#D0A279" />
+          <rect x="6" y="3.0022" width="1" height="1.00111" fill="#D0A279" />
+          <rect y="4.00342" width="1" height="1.00111" fill="#D0A279" />
+          <rect x="1" y="4.00342" width="1" height="1.00111" fill="#D0A279" />
+          <rect x="2" y="4.00342" width="1" height="1.00111" fill="#D0A279" />
+          <rect x="3" y="4.00342" width="1" height="1.00111" fill="#D0A279" />
+          <rect x="4" y="4.00342" width="1" height="1.00111" fill="#D0A279" />
+          <rect x="5" y="4.00342" width="1" height="1.00111" fill="#D0A279" />
+          <rect x="6" y="4.00342" width="1" height="1.00111" fill="#D0A279" />
+          <rect y="5.00452" width="1" height="1.00111" fill="#D0A279" />
+          <rect x="1" y="5.00452" width="1" height="1.00111" fill="#D0A279" />
+          <rect x="2" y="5.00452" width="1" height="1.00111" fill="#D0A279" />
+          <rect x="3" y="5.00452" width="1" height="1.00111" fill="#D0A279" />
+          <rect x="4" y="5.00452" width="1" height="1.00111" fill="#D0A279" />
+          <rect x="5" y="5.00452" width="1" height="1.00111" fill="#D0A279" />
+          <rect x="6" y="5.00452" width="1" height="1.00111" fill="#D0A279" />
+          <rect x="1" y="6.00562" width="1" height="1.00111" fill="#D0A279" />
+          <rect x="2" y="6.00562" width="1" height="1.00111" fill="#D0A279" />
+          <rect x="3" y="6.00562" width="1" height="1.00111" fill="#D0A279" />
+          <rect x="4" y="6.00562" width="1" height="1.00111" fill="#D0A279" />
+          <rect x="5" y="6.00562" width="1" height="1.00111" fill="#D0A279" />
+          <rect x="2" y="7.00671" width="1" height="1.00111" fill="#D0A279" />
+          <rect x="3" y="7.00671" width="1" height="1.00111" fill="#D0A279" />
+          <rect x="4" y="7.00671" width="1" height="1.00111" fill="#D0A279" />
+          <rect x="2" y="2.0011" width="1" height="1.00111" fill="#D0A279" />
+          <rect x="3" y="2.0011" width="1" height="1.00111" fill="#D0A279" />
+          <rect x="4" y="2.0011" width="1" height="1.00111" fill="#D0A279" />
+          <rect x="5" y="2.0011" width="1" height="1.00111" fill="#D0A279" />
+          <rect x="3" y="2.0011" width="1" height="1.00111" fill="#79542E" />
+          <rect x="1" y="3.84314" width="1" height="1.00111" fill="#79542E" />
+          <rect x="3" y="3.84314" width="1" height="1.00111" fill="#79542E" />
+          <rect x="5" y="3.84314" width="1" height="1.00111" fill="#79542E" />
+          <rect x="2" y="6.00562" width="1" height="1.00111" fill="#79542E" />
+          <rect x="4" y="6.00562" width="1" height="1.00111" fill="#79542E" />
+          <rect x="5" y="1" width="1" height="1.00111" fill="#BC7E48" />
+          <rect x="6" y="2.0011" width="1" height="1.00111" fill="#BC7E48" />
+          <rect x="7" y="3.0022" width="1" height="1.00111" fill="#BC7E48" />
+          <rect x="7" y="4.00342" width="1" height="1.00111" fill="#BC7E48" />
+          <rect x="7" y="5.00452" width="1" height="1.00111" fill="#BC7E48" />
+          <rect x="6" y="6.00562" width="1" height="1.00111" fill="#BC7E48" />
+          <rect x="5" y="7.00671" width="1" height="1.00111" fill="#BC7E48" />
+        </svg>
+        <svg
+          class="nav-logo"
+          id="logo3"
+          width="4"
+          height="9"
+          viewBox="0 0 4 9"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect y="1" width="1" height="1.00111" fill="#F5F5F5" />
+          <rect x="1" y="1" width="1" height="1.00111" fill="#F5F5F5" />
+          <rect x="2" y="1" width="1" height="1.00111" fill="#F5F5F5" />
+          <rect x="3" y="3.0022" width="1" height="1.00111" fill="#F5F5F5" />
+          <rect x="3" y="2.0011" width="1" height="1.00111" fill="#F5F5F5" />
+          <rect x="3" y="4.0033" width="1" height="1.00111" fill="#F5F5F5" />
+          <rect x="3" y="5.00452" width="1" height="1.00111" fill="#F5F5F5" />
+          <rect x="2" y="6.9967" width="1" height="1.00111" fill="#F5F5F5" />
+          <rect x="3" y="6.00562" width="1" height="1.00111" fill="#F5F5F5" />
+          <rect x="1" y="6.9967" width="1" height="1.00111" fill="#F5F5F5" />
+          <rect y="2.0011" width="1" height="1.00111" fill="#F5F5F5" />
+          <rect y="3.0022" width="1" height="1.00111" fill="#F5F5F5" />
+          <rect y="4.0033" width="1" height="1.00111" fill="#F5F5F5" />
+          <rect y="5.00452" width="1" height="1.00111" fill="#F5F5F5" />
+          <rect y="6.00562" width="1" height="1.00111" fill="#F5F5F5" />
+          <rect y="7.00671" width="1" height="1.00111" fill="#F5F5F5" />
+        </svg>
+        <svg
+          class="nav-logo"
+          id="logo4"
+          width="4"
+          height="9"
+          viewBox="0 0 4 9"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect x="1" y="1.0011" width="1" height="1.00111" fill="#F5F5F5" />
+          <rect x="2" y="1.0011" width="1" height="1.00111" fill="#F5F5F5" />
+          <rect x="3" y="1.0011" width="1" height="1.00111" fill="#F5F5F5" />
+          <rect x="1" y="4.00439" width="1" height="1.00111" fill="#F5F5F5" />
+          <rect x="2" y="4.00439" width="1" height="1.00111" fill="#F5F5F5" />
+          <rect x="3" y="6.9978" width="1" height="1.00111" fill="#F5F5F5" />
+          <rect x="2" y="7.00781" width="1" height="1.00111" fill="#F5F5F5" />
+          <rect x="1" y="6.9978" width="1" height="1.00111" fill="#F5F5F5" />
+          <rect y="2.0022" width="1" height="1.00111" fill="#F5F5F5" />
+          <rect y="3.0033" width="1" height="1.00111" fill="#F5F5F5" />
+          <rect y="4.00439" width="1" height="1.00111" fill="#F5F5F5" />
+          <rect y="5.00562" width="1" height="1.00111" fill="#F5F5F5" />
+          <rect y="6.00671" width="1" height="1.00111" fill="#F5F5F5" />
+        </svg>
+        <svg
+          class="nav-logo"
+          id="logo5"
+          width="5"
+          height="9"
+          viewBox="0 0 5 9"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            id="thisRect"
+            x="1"
+            y="4.99561"
+            width="1"
+            height="1.00111"
+            fill="#F5F5F5"
+          />
+          <rect x="3" y="5.9967" width="1" height="1.00111" fill="#F5F5F5" />
+          <rect x="1" y="5.9967" width="1" height="1.00111" fill="#F5F5F5" />
+          <rect x="2" y="7.00781" width="1" height="1.00111" fill="#F5F5F5" />
+          <rect y="1.0011" width="1" height="1.00111" fill="#F5F5F5" />
+          <rect y="2.0022" width="1" height="1.00111" fill="#F5F5F5" />
+          <rect y="3.0033" width="1" height="1.00111" fill="#F5F5F5" />
+          <rect x="4" y="1.0011" width="1" height="1.00111" fill="#F5F5F5" />
+          <rect x="4" y="2.0022" width="1" height="1.00111" fill="#F5F5F5" />
+          <rect x="4" y="3.0033" width="1" height="1.00111" fill="#F5F5F5" />
+          <rect y="3.99438" width="1" height="1.00111" fill="#F5F5F5" />
+          <rect x="3" y="4.99561" width="1" height="1.00111" fill="#F5F5F5" />
+          <rect x="4" y="3.99438" width="1" height="1.00111" fill="#F5F5F5" />
+        </svg>
+        <svg
+          class="nav-logo"
+          id="logo6"
+          width="4"
+          height="9"
+          viewBox="0 0 4 9"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            width="1"
+            height="1.00111"
+            transform="matrix(-1 0 0 1 1 0)"
+            fill="#F5F5F5"
+          />
+          <rect
+            width="1"
+            height="1.00111"
+            transform="matrix(-1 0 0 1 2 0)"
+            fill="#F5F5F5"
+          />
+          <rect
+            width="1"
+            height="1.00111"
+            transform="matrix(-1 0 0 1 3 1.0011)"
+            fill="#F5F5F5"
+          />
+          <rect
+            width="1"
+            height="1.00111"
+            transform="matrix(-1 0 0 1 3 2.0022)"
+            fill="#F5F5F5"
+          />
+          <rect
+            width="1"
+            height="1.00111"
+            transform="matrix(-1 0 0 1 3 3.0033)"
+            fill="#F5F5F5"
+          />
+          <rect
+            width="1"
+            height="1.00111"
+            transform="matrix(-1 0 0 1 4 4.00439)"
+            fill="#F5F5F5"
+          />
+          <rect
+            width="1"
+            height="1.00111"
+            transform="matrix(-1 0 0 1 3 5.00562)"
+            fill="#F5F5F5"
+          />
+          <rect
+            width="1"
+            height="1.00111"
+            transform="matrix(-1 0 0 1 3 6.00671)"
+            fill="#F5F5F5"
+          />
+          <rect
+            width="1"
+            height="1.00111"
+            transform="matrix(-1 0 0 1 3 6.9978)"
+            fill="#F5F5F5"
+          />
+          <rect
+            width="1"
+            height="1.00111"
+            transform="matrix(-1 0 0 1 2 7.9989)"
+            fill="#F5F5F5"
+          />
+          <rect
+            width="1"
+            height="1.00111"
+            transform="matrix(-1 0 0 1 1 7.9989)"
+            fill="#F5F5F5"
+          />
+        </svg>
+        <svg
+          class="cursor"
+          id="cursor"
+          width="1"
+          height="10"
+          viewBox="0 0 1 10"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            width="1"
+            height="1.00111"
+            transform="matrix(-1 0 0 1 1 0)"
+            fill="#F5F5F5"
+          />
+          <rect
+            width="1"
+            height="1.00111"
+            transform="matrix(-1 0 0 1 1 1)"
+            fill="#F5F5F5"
+          />
+          <rect
+            width="1"
+            height="1.00111"
+            transform="matrix(-1 0 0 1 1 2)"
+            fill="#F5F5F5"
+          />
+          <rect
+            width="1"
+            height="1.00111"
+            transform="matrix(-1 0 0 1 1 3)"
+            fill="#F5F5F5"
+          />
+          <rect
+            width="1"
+            height="1.00111"
+            transform="matrix(-1 0 0 1 1 4)"
+            fill="#F5F5F5"
+          />
+          <rect
+            width="1"
+            height="1.00111"
+            transform="matrix(-1 0 0 1 1 5)"
+            fill="#F5F5F5"
+          />
+          <rect
+            width="1"
+            height="1.00111"
+            transform="matrix(-1 0 0 1 1 6)"
+            fill="#F5F5F5"
+          />
+          <rect
+            width="1"
+            height="1.00111"
+            transform="matrix(-1 0 0 1 1 7)"
+            fill="#F5F5F5"
+          />
+          <rect
+            width="1"
+            height="1.00111"
+            transform="matrix(-1 0 0 1 1 8)"
+            fill="#F5F5F5"
+          />
+        </svg> </label
+      ><input
+        onchange="checkboxToggle(this)"
+        type="checkbox"
+        id="nav-toggle"
+        class="nav-toggle"
+      />
+      <nav class="nav-list ">
+        <li class="nav-list-void"></li>
+        <li id="about-button" class="nav-list-item">
+          <a href="#about">About Me</a>
+        </li>
+        <li id="work-button" class="nav-list-item">
+          <a href="#work">My Work</a>
+        </li>
+        <li id="contact-button" class="nav-list-item">
+          <a href="#footer">Contact Me</a>
+        </li>
+      </nav>
+    </div>
+    <div class="content-wrapper">
+      <div id="about" class="about">
+        <div class="rock-dude">
+          <img id="avatar" src="./images/Avatar.svg" alt="" />
 
-<body>
-  <div id="nav" class="nav">
-    <input type="checkbox" id="menu-close" class="toggle">
-    <a id="toggle" class="nav-logo-outer">
-
-      <svg class="nav-logo" id="logo1" width="4" height="9" viewBox="0 0 4 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="3" width="1" height="1.00111" fill="#F5F5F5" />
-        <rect x="2" width="1" height="1.00111" fill="#F5F5F5" />
-        <rect x="1" y="1.0011" width="1" height="1.00111" fill="#F5F5F5" />
-        <rect x="1" y="2.0022" width="1" height="1.00111" fill="#F5F5F5" />
-        <rect x="1" y="3.0033" width="1" height="1.00111" fill="#F5F5F5" />
-        <rect y="4.00439" width="1" height="1.00111" fill="#F5F5F5" />
-        <rect x="1" y="5.00562" width="1" height="1.00111" fill="#F5F5F5" />
-        <rect x="1" y="6.00671" width="1" height="1.00111" fill="#F5F5F5" />
-        <rect x="1" y="6.9978" width="1" height="1.00111" fill="#F5F5F5" />
-        <rect x="2" y="7.9989" width="1" height="1.00111" fill="#F5F5F5" />
-        <rect x="3" y="7.9989" width="1" height="1.00111" fill="#F5F5F5" />
-      </svg>
-      <svg class="nav-logo" id="logo2" width="8" height="9" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="2" y="1" width="1" height="1.00111" fill="#D0A279" />
-        <rect x="3" y="1" width="1" height="1.00111" fill="#D0A279" />
-        <rect x="4" y="1" width="1" height="1.00111" fill="#D0A279" />
-        <rect x="1" y="2.0011" width="1" height="1.00111" fill="#D0A279" />
-        <rect y="3.0022" width="1" height="1.00111" fill="#D0A279" />
-        <rect x="1" y="3.0022" width="1" height="1.00111" fill="#D0A279" />
-        <rect x="2" y="3.0022" width="1" height="1.00111" fill="#D0A279" />
-        <rect x="3" y="3.0022" width="1" height="1.00111" fill="#D0A279" />
-        <rect x="4" y="3.0022" width="1" height="1.00111" fill="#D0A279" />
-        <rect x="5" y="3.0022" width="1" height="1.00111" fill="#D0A279" />
-        <rect x="6" y="3.0022" width="1" height="1.00111" fill="#D0A279" />
-        <rect y="4.00342" width="1" height="1.00111" fill="#D0A279" />
-        <rect x="1" y="4.00342" width="1" height="1.00111" fill="#D0A279" />
-        <rect x="2" y="4.00342" width="1" height="1.00111" fill="#D0A279" />
-        <rect x="3" y="4.00342" width="1" height="1.00111" fill="#D0A279" />
-        <rect x="4" y="4.00342" width="1" height="1.00111" fill="#D0A279" />
-        <rect x="5" y="4.00342" width="1" height="1.00111" fill="#D0A279" />
-        <rect x="6" y="4.00342" width="1" height="1.00111" fill="#D0A279" />
-        <rect y="5.00452" width="1" height="1.00111" fill="#D0A279" />
-        <rect x="1" y="5.00452" width="1" height="1.00111" fill="#D0A279" />
-        <rect x="2" y="5.00452" width="1" height="1.00111" fill="#D0A279" />
-        <rect x="3" y="5.00452" width="1" height="1.00111" fill="#D0A279" />
-        <rect x="4" y="5.00452" width="1" height="1.00111" fill="#D0A279" />
-        <rect x="5" y="5.00452" width="1" height="1.00111" fill="#D0A279" />
-        <rect x="6" y="5.00452" width="1" height="1.00111" fill="#D0A279" />
-        <rect x="1" y="6.00562" width="1" height="1.00111" fill="#D0A279" />
-        <rect x="2" y="6.00562" width="1" height="1.00111" fill="#D0A279" />
-        <rect x="3" y="6.00562" width="1" height="1.00111" fill="#D0A279" />
-        <rect x="4" y="6.00562" width="1" height="1.00111" fill="#D0A279" />
-        <rect x="5" y="6.00562" width="1" height="1.00111" fill="#D0A279" />
-        <rect x="2" y="7.00671" width="1" height="1.00111" fill="#D0A279" />
-        <rect x="3" y="7.00671" width="1" height="1.00111" fill="#D0A279" />
-        <rect x="4" y="7.00671" width="1" height="1.00111" fill="#D0A279" />
-        <rect x="2" y="2.0011" width="1" height="1.00111" fill="#D0A279" />
-        <rect x="3" y="2.0011" width="1" height="1.00111" fill="#D0A279" />
-        <rect x="4" y="2.0011" width="1" height="1.00111" fill="#D0A279" />
-        <rect x="5" y="2.0011" width="1" height="1.00111" fill="#D0A279" />
-        <rect x="3" y="2.0011" width="1" height="1.00111" fill="#79542E" />
-        <rect x="1" y="3.84314" width="1" height="1.00111" fill="#79542E" />
-        <rect x="3" y="3.84314" width="1" height="1.00111" fill="#79542E" />
-        <rect x="5" y="3.84314" width="1" height="1.00111" fill="#79542E" />
-        <rect x="2" y="6.00562" width="1" height="1.00111" fill="#79542E" />
-        <rect x="4" y="6.00562" width="1" height="1.00111" fill="#79542E" />
-        <rect x="5" y="1" width="1" height="1.00111" fill="#BC7E48" />
-        <rect x="6" y="2.0011" width="1" height="1.00111" fill="#BC7E48" />
-        <rect x="7" y="3.0022" width="1" height="1.00111" fill="#BC7E48" />
-        <rect x="7" y="4.00342" width="1" height="1.00111" fill="#BC7E48" />
-        <rect x="7" y="5.00452" width="1" height="1.00111" fill="#BC7E48" />
-        <rect x="6" y="6.00562" width="1" height="1.00111" fill="#BC7E48" />
-        <rect x="5" y="7.00671" width="1" height="1.00111" fill="#BC7E48" />
-      </svg>
-      <svg class="nav-logo" id="logo3" width="4" height="9" viewBox="0 0 4 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect y="1" width="1" height="1.00111" fill="#F5F5F5" />
-        <rect x="1" y="1" width="1" height="1.00111" fill="#F5F5F5" />
-        <rect x="2" y="1" width="1" height="1.00111" fill="#F5F5F5" />
-        <rect x="3" y="3.0022" width="1" height="1.00111" fill="#F5F5F5" />
-        <rect x="3" y="2.0011" width="1" height="1.00111" fill="#F5F5F5" />
-        <rect x="3" y="4.0033" width="1" height="1.00111" fill="#F5F5F5" />
-        <rect x="3" y="5.00452" width="1" height="1.00111" fill="#F5F5F5" />
-        <rect x="2" y="6.9967" width="1" height="1.00111" fill="#F5F5F5" />
-        <rect x="3" y="6.00562" width="1" height="1.00111" fill="#F5F5F5" />
-        <rect x="1" y="6.9967" width="1" height="1.00111" fill="#F5F5F5" />
-        <rect y="2.0011" width="1" height="1.00111" fill="#F5F5F5" />
-        <rect y="3.0022" width="1" height="1.00111" fill="#F5F5F5" />
-        <rect y="4.0033" width="1" height="1.00111" fill="#F5F5F5" />
-        <rect y="5.00452" width="1" height="1.00111" fill="#F5F5F5" />
-        <rect y="6.00562" width="1" height="1.00111" fill="#F5F5F5" />
-        <rect y="7.00671" width="1" height="1.00111" fill="#F5F5F5" />
-      </svg>
-      <svg class="nav-logo" id="logo4" width="4" height="9" viewBox="0 0 4 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="1" y="1.0011" width="1" height="1.00111" fill="#F5F5F5" />
-        <rect x="2" y="1.0011" width="1" height="1.00111" fill="#F5F5F5" />
-        <rect x="3" y="1.0011" width="1" height="1.00111" fill="#F5F5F5" />
-        <rect x="1" y="4.00439" width="1" height="1.00111" fill="#F5F5F5" />
-        <rect x="2" y="4.00439" width="1" height="1.00111" fill="#F5F5F5" />
-        <rect x="3" y="6.9978" width="1" height="1.00111" fill="#F5F5F5" />
-        <rect x="2" y="7.00781" width="1" height="1.00111" fill="#F5F5F5" />
-        <rect x="1" y="6.9978" width="1" height="1.00111" fill="#F5F5F5" />
-        <rect y="2.0022" width="1" height="1.00111" fill="#F5F5F5" />
-        <rect y="3.0033" width="1" height="1.00111" fill="#F5F5F5" />
-        <rect y="4.00439" width="1" height="1.00111" fill="#F5F5F5" />
-        <rect y="5.00562" width="1" height="1.00111" fill="#F5F5F5" />
-        <rect y="6.00671" width="1" height="1.00111" fill="#F5F5F5" />
-      </svg>
-      <svg class="nav-logo" id="logo5" width="5" height="9" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect id="thisRect" x="1" y="4.99561" width="1" height="1.00111" fill="#F5F5F5" />
-        <rect x="3" y="5.9967" width="1" height="1.00111" fill="#F5F5F5" />
-        <rect x="1" y="5.9967" width="1" height="1.00111" fill="#F5F5F5" />
-        <rect x="2" y="7.00781" width="1" height="1.00111" fill="#F5F5F5" />
-        <rect y="1.0011" width="1" height="1.00111" fill="#F5F5F5" />
-        <rect y="2.0022" width="1" height="1.00111" fill="#F5F5F5" />
-        <rect y="3.0033" width="1" height="1.00111" fill="#F5F5F5" />
-        <rect x="4" y="1.0011" width="1" height="1.00111" fill="#F5F5F5" />
-        <rect x="4" y="2.0022" width="1" height="1.00111" fill="#F5F5F5" />
-        <rect x="4" y="3.0033" width="1" height="1.00111" fill="#F5F5F5" />
-        <rect y="3.99438" width="1" height="1.00111" fill="#F5F5F5" />
-        <rect x="3" y="4.99561" width="1" height="1.00111" fill="#F5F5F5" />
-        <rect x="4" y="3.99438" width="1" height="1.00111" fill="#F5F5F5" />
-      </svg>
-      <svg class="nav-logo" id="logo6" width="4" height="9" viewBox="0 0 4 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="1" height="1.00111" transform="matrix(-1 0 0 1 1 0)" fill="#F5F5F5" />
-        <rect width="1" height="1.00111" transform="matrix(-1 0 0 1 2 0)" fill="#F5F5F5" />
-        <rect width="1" height="1.00111" transform="matrix(-1 0 0 1 3 1.0011)" fill="#F5F5F5" />
-        <rect width="1" height="1.00111" transform="matrix(-1 0 0 1 3 2.0022)" fill="#F5F5F5" />
-        <rect width="1" height="1.00111" transform="matrix(-1 0 0 1 3 3.0033)" fill="#F5F5F5" />
-        <rect width="1" height="1.00111" transform="matrix(-1 0 0 1 4 4.00439)" fill="#F5F5F5" />
-        <rect width="1" height="1.00111" transform="matrix(-1 0 0 1 3 5.00562)" fill="#F5F5F5" />
-        <rect width="1" height="1.00111" transform="matrix(-1 0 0 1 3 6.00671)" fill="#F5F5F5" />
-        <rect width="1" height="1.00111" transform="matrix(-1 0 0 1 3 6.9978)" fill="#F5F5F5" />
-        <rect width="1" height="1.00111" transform="matrix(-1 0 0 1 2 7.9989)" fill="#F5F5F5" />
-        <rect width="1" height="1.00111" transform="matrix(-1 0 0 1 1 7.9989)" fill="#F5F5F5" />
-      </svg>
-      <svg class="cursor" id="cursor" width="1" height="10" viewBox="0 0 1 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="1" height="1.00111" transform="matrix(-1 0 0 1 1 0)" fill="#F5F5F5" />
-        <rect width="1" height="1.00111" transform="matrix(-1 0 0 1 1 1)" fill="#F5F5F5" />
-        <rect width="1" height="1.00111" transform="matrix(-1 0 0 1 1 2)" fill="#F5F5F5" />
-        <rect width="1" height="1.00111" transform="matrix(-1 0 0 1 1 3)" fill="#F5F5F5" />
-        <rect width="1" height="1.00111" transform="matrix(-1 0 0 1 1 4)" fill="#F5F5F5" />
-        <rect width="1" height="1.00111" transform="matrix(-1 0 0 1 1 5)" fill="#F5F5F5" />
-        <rect width="1" height="1.00111" transform="matrix(-1 0 0 1 1 6)" fill="#F5F5F5" />
-        <rect width="1" height="1.00111" transform="matrix(-1 0 0 1 1 7)" fill="#F5F5F5" />
-        <rect width="1" height="1.00111" transform="matrix(-1 0 0 1 1 8)" fill="#F5F5F5" />
-      </svg>
-    </a>
-    <ul class="nav-list ">
-      <li class="nav-list-void"></li>
-      <li id="about-button" class="nav-list-item">
-        <a href="#about">About Me</a>
-      </li>
-      <li id="work-button" class="nav-list-item">
-        <a href="#work">My Work</a>
-      </li>
-      <li id="contact-button" class="nav-list-item">
-        <a href="#footer">Contact Me</a>
-      </li>
-    </ul>
-  </div>
-  <div class="content-wrapper">
-    <div id="about" class="about">
-      <div class="rock-dude">
-        <img id="avatar" src="./images/Avatar.svg" alt="" />
-        <img id="speechspike" src="./images/speech-spike.svg" alt="speech bubble graphic" />
-        <img class="speech-bubble" id="topleft" src="./images/speech-top-left.svg" alt="speech bubble graphic" />
-        <img class="speech-bubble inner" id="topmid" src="./images/speech-top-mid.svg" alt="speech bubble graphic" />
-        <img class="speech-bubble" id="topright" src="./images/speech-top-right.svg" alt="speech bubble graphic" />
-        <img class="speech-bubble inner" id="midleft" src="./images/speech-side-left.svg" alt="speech bubble graphic" />
-        <span class="inner" id="middle"></span>
-        <img class="speech-bubble inner" id="midright" src="./images/speech-side-right.svg" alt="speech bubble graphic" />
-        <img class="speech-bubble" id="botleft" src="./images/speech-bottom-left.svg" alt="speech bubble graphic" />
-        <img class="speech-bubble inner" id="botmid" src="./images/speech-bottom-mid.svg" alt="speech bubble graphic" />
-        <img class="speech-bubble" id="botright" src="./images/speech-bottom-right.svg" alt="speech bubble graphic" />
-        <div class="speech-text">
-          <div class="speech-text-inner">
-            const <span class="text-var">kookyDev </span>= {<br />
-            <span class="text-var">Name:</span>
-            <span class="text-string">"Kyle"</span> , <br />
-            <span class="text-var">Likes:</span> [<span class="text-string">"Writing Code"</span>, <span class="text-string">"Playing
-              guitar"</span>,
-            <span class="text-string">"Singing"</span>,
-            <span class="text-string">"Learning new things"</span>,
-            <span class="text-string">"Pushing my limits"</span>,
-            <span class="text-string">"The occasional cookie..."</span>],
-            <br />
-            <span class="text-var">Loves:</span>
-            <span class="text-string">"My family"</span>, <br />
-            <span class="text-var">Dislikes:</span> [<span class="text-string">"Negativity (is that ironic?..)"</span>,
-            <span class="text-string">"Admitting defeat"</span>], <br />
-            <span class="text-var">About:</span>
-            <span class="text-string">"I'm a Full-stack Developer based in the Chester (UK) area.
-              After years in a career which I was good at, but in which I never felt I belonged, I took the plunge into
-              this wondrous coding adventure - I know now that this is what I should have been doing all along, this is
-              where I belong! Anyway, check out some of my
-              work below and if you like what you see, or want to hire me,😉 let me know."</span>}<br />
-            <br />
+          <div class="speech-text nes-balloon from-left">
+            <div class="speech-text-inner">
+              <span class="text-var">kookyDev </span>= {<br />
+              <span class="text-var">Name:</span>
+              <span class="text-string">"Kyle"</span> , <br />
+              <span class="text-var">Likes:</span> [<span class="text-string"
+                >"Writing Code"</span
+              >, <span class="text-string">"Playing guitar"</span>,
+              <span class="text-string">"Singing"</span>,
+              <span class="text-string">"Learning new things"</span>,
+              <span class="text-string">"Pushing my limits"</span>,
+              <span class="text-string">"The occasional cookie..."</span>],
+              <br />
+              <span class="text-var">Loves:</span>
+              <span class="text-string">"My family"</span>, <br />
+              <span class="text-var">Dislikes:</span> [<span class="text-string"
+                >"Negativity (is that ironic?..)"</span
+              >, <span class="text-string">"Admitting defeat"</span>], <br />
+              <span class="text-var">About:</span>
+              <span class="text-string"
+                >"I'm a Junior Full-stack Developer based in the Chester (UK)
+                area. After years in a career which I was good at, but in which
+                I never felt I belonged, I took the plunge into this wondrous
+                coding adventure - and along the way I've found that this was
+                where I always belonged! I love creating awesome things with
+                tech. Check out some of my work below and, if you like what you
+                see, or want to hire me,😉 let me know."</span
+              >}<br />
+              <br />
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div id="work" class="work">
-      <div class="work-grid">
-        <div class="nes-container is-rounded work-grid-inner tilt-left" id="work-inner1">
+      <div id="work" class="work">
+        <div class="work-grid">
+          <a
+            class="nes-container is-rounded work-grid-inner tilt-left"
+            id="work-inner1"
+            href="https://protected-springs-37746.herokuapp.com/"
+            target="_blank"
+          >
+            <div class="work-overlay">
+              <h1>Weather.io</h1>
+              <p>
+                A weather application using 3 ReSTful API's to look up a
+                location, the weather at that location and an image related to
+                the weather and display it all to the user in a slick interface.
+              </p>
+
+              <div class="tech-stack">
+                <p>Tech Stack:</p>
+                <div>
+                  <img
+                    class="tech-badge"
+                    src="./images/CSS-Badge.png"
+                    alt="CSS Badge"
+                  />
+                  <img
+                    class="tech-badge"
+                    src="./images/HTML-Badge.png"
+                    alt="HTML Badge"
+                  />
+                  <img
+                    class="tech-badge"
+                    src="./images/JS-Badge.png"
+                    alt="Javascript Badge"
+                  />
+                  <img
+                    class="tech-badge"
+                    src="./images/NodeJS-Badge.png"
+                    alt="Node JS Badge"
+                  />
+                  <img
+                    class="tech-badge"
+                    src="./images/ExpressJS-Badge.png"
+                    alt="Express JS Badge"
+                  />
+                </div>
+              </div>
+            </div>
+          </a>
+          <div
+            class="nes-container is-rounded work-grid-inner tilt-right"
+            id="work-inner2"
+          >
+            <div class="work-overlay">
+              <h1>Weather.io</h1>
+              <p>
+                A weather application using 3 Rest API's to lookup a location,
+                the weather at that location and an image related to the weather
+                and display it to the user in a slick interface.
+              </p>
+              <p>Tech Stack:</p>
+              <div class="tech-stack">
+                <img
+                  class="tech-badge"
+                  src="./images/CSS-Badge.png"
+                  alt="CSS Badge"
+                />
+                <img
+                  class="tech-badge"
+                  src="./images/HTML-Badge.png"
+                  alt="HTML Badge"
+                />
+                <img
+                  class="tech-badge"
+                  src="./images/JS-Badge.png"
+                  alt="JS Badge"
+                />
+                <img
+                  class="tech-badge"
+                  src="./images/NodeJS-Badge.png"
+                  alt="NodeJS Badge"
+                />
+                <img
+                  class="tech-badge"
+                  src="./images/React-Badge.png"
+                  alt="React Badge"
+                />
+                <img
+                  class="tech-badge"
+                  src="./images/ExpressJS-Badge.png"
+                  alt="Express Badge"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="nes-container is-rounded work-grid-inner tilt-left"
+            id="work-inner3"
+          >
+            <div class="work-overlay">
+              <h1>Weather.io</h1>
+              <p>
+                A weather application using 3 Rest API's to lookup a location,
+                the weather at that location and an image related to the weather
+                and display it to the user in a slick interface.
+              </p>
+              <p>Tech Stack:</p>
+              <div class="tech-stack">
+                <img
+                  class="tech-badge"
+                  src="./images/CSS-Badge.png"
+                  alt="CSS Badge"
+                />
+                <img
+                  class="tech-badge"
+                  src="./images/HTML-Badge.png"
+                  alt="HTML Badge"
+                />
+                <img
+                  class="tech-badge"
+                  src="./images/JS-Badge.png"
+                  alt="JS Badge"
+                />
+                <img
+                  class="tech-badge"
+                  src="./images/NodeJS-Badge.png"
+                  alt="NodeJS Badge"
+                />
+                <img
+                  class="tech-badge"
+                  src="./images/React-Badge.png"
+                  alt="React Badge"
+                />
+                <img
+                  class="tech-badge"
+                  src="./images/ExpressJS-Badge.png"
+                  alt="Express Badge"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="nes-container is-rounded work-grid-inner tilt-right"
+            id="work-inner4"
+          >
+            <div class="work-overlay">
+              <h1>Weather.io</h1>
+              <p>
+                A weather application using 3 Rest API's to lookup a location,
+                the weather at that location and an image related to the weather
+                and display it to the user in a slick interface.
+              </p>
+              <p>Tech Stack:</p>
+              <div class="tech-stack">
+                <img
+                  class="tech-badge"
+                  src="./images/CSS-Badge.png"
+                  alt="CSS Badge"
+                />
+                <img
+                  class="tech-badge"
+                  src="./images/HTML-Badge.png"
+                  alt="HTML Badge"
+                />
+                <img
+                  class="tech-badge"
+                  src="./images/JS-Badge.png"
+                  alt="JS Badge"
+                />
+                <img
+                  class="tech-badge"
+                  src="./images/NodeJS-Badge.png"
+                  alt="NodeJS Badge"
+                />
+                <img
+                  class="tech-badge"
+                  src="./images/React-Badge.png"
+                  alt="React Badge"
+                />
+                <img
+                  class="tech-badge"
+                  src="./images/ExpressJS-Badge.png"
+                  alt="Express Badge"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="nes-container is-rounded work-grid-inner"
+            id="work-inner5"
+          >
+            <div class="work-overlay">
+              <h1>Weather.io</h1>
+              <p>
+                A weather application using 3 Rest
+              </p>
+              <p>Tech Stack:</p>
+              <div class="tech-stack">
+                <img
+                  class="tech-badge"
+                  src="./images/CSS-Badge.png"
+                  alt="CSS Badge"
+                />
+                <img
+                  class="tech-badge"
+                  src="./images/HTML-Badge.png"
+                  alt="HTML Badge"
+                />
+                <img
+                  class="tech-badge"
+                  src="./images/JS-Badge.png"
+                  alt="JS Badge"
+                />
+                <img
+                  class="tech-badge"
+                  src="./images/NodeJS-Badge.png"
+                  alt="NodeJS Badge"
+                />
+                <img
+                  class="tech-badge"
+                  src="./images/React-Badge.png"
+                  alt="React Badge"
+                />
+                <img
+                  class="tech-badge"
+                  src="./images/ExpressJS-Badge.png"
+                  alt="Express Badge"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="nes-container is-rounded work-grid-inner tilt-left"
+            id="work-inner6"
+          >
+            <div class="work-overlay">
+              <h1>Weather.io</h1>
+              <p>
+                A weather application using 3 Rest API's to lookup a location,
+                the weather at that location and an image related to the weather
+                and display it to the user in a slick interface.
+              </p>
+              <p>Tech Stack:</p>
+              <div class="tech-stack">
+                <img
+                  class="tech-badge"
+                  src="./images/CSS-Badge.png"
+                  alt="CSS Badge"
+                />
+                <img
+                  class="tech-badge"
+                  src="./images/HTML-Badge.png"
+                  alt="HTML Badge"
+                />
+                <img
+                  class="tech-badge"
+                  src="./images/JS-Badge.png"
+                  alt="JS Badge"
+                />
+                <img
+                  class="tech-badge"
+                  src="./images/NodeJS-Badge.png"
+                  alt="NodeJS Badge"
+                />
+                <img
+                  class="tech-badge"
+                  src="./images/React-Badge.png"
+                  alt="React Badge"
+                />
+                <img
+                  class="tech-badge"
+                  src="./images/ExpressJS-Badge.png"
+                  alt="Express Badge"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="nes-container is-rounded work-grid-inner tilt-right"
+            id="work-inner7"
+          >
+            <div class="work-overlay">
+              <h1>Weather.io</h1>
+              <p>
+                A weather application using 3 Rest API's to lookup a location,
+                the weather at that location and an image related to the weather
+                and display it to the user in a slick interface.
+              </p>
+              <p>Tech Stack:</p>
+              <div class="tech-stack">
+                <img
+                  class="tech-badge"
+                  src="./images/CSS-Badge.png"
+                  alt="CSS Badge"
+                />
+                <img
+                  class="tech-badge"
+                  src="./images/HTML-Badge.png"
+                  alt="HTML Badge"
+                />
+                <img
+                  class="tech-badge"
+                  src="./images/JS-Badge.png"
+                  alt="JS Badge"
+                />
+                <img
+                  class="tech-badge"
+                  src="./images/NodeJS-Badge.png"
+                  alt="NodeJS Badge"
+                />
+                <img
+                  class="tech-badge"
+                  src="./images/React-Badge.png"
+                  alt="React Badge"
+                />
+                <img
+                  class="tech-badge"
+                  src="./images/ExpressJS-Badge.png"
+                  alt="Express Badge"
+                />
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="nes-container is-rounded work-grid-inner tilt-right" id="work-inner2"></div>
-        <div class="nes-container is-rounded work-grid-inner tilt-left" id="work-inner3"></div>
-        <div class="nes-container is-rounded work-grid-inner tilt-right" id="work-inner4"></div>
-        <div class="nes-container is-rounded work-grid-inner" id="work-inner5"></div>
-        <div class="nes-container is-rounded work-grid-inner tilt-left" id="work-inner6"></div>
-        <div class="nes-container is-rounded work-grid-inner tilt-right" id="work-inner7"></div>
-
       </div>
+      <div id="footer" class="footer"></div>
     </div>
-    <div id="footer" class="footer"></div>
-  </div>
-  <script src="main.js"></script>
-</body>
-
+    <script src="main.js"></script>
+  </body>
 </html>

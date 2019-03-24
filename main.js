@@ -1,11 +1,15 @@
 let menuCollapsed = false;
 let nav = document.getElementById("nav");
-
 let navList = document.querySelector("nav-list");
-let navtrigger = document.getElementById("toggle");
-navtrigger.addEventListener("click", () => {
-  menuAnimation();
-});
+
+
+function checkboxToggle(el) {
+  if (el.checked) {
+    nav.style.width = "100%"
+  } else {
+    nav.style.width = "auto"
+  }
+}
 
 // window.onscroll = function () {
 //   scrollTrigger()
