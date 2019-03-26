@@ -11,6 +11,7 @@ body {
   width: 100%;
   min-height: 100vh;
   font-family: "VT323", monospace;
+  line-height: 1;
 }
 
 a {
@@ -57,7 +58,7 @@ a {
   grid-area: nav;
   box-shadow: 5px 5px 20px #1b1b1ba9;
   z-index: 1000;
-  transition: width 1.5s ease-out, border-radius 1s ease-in-out;
+  transition: width 1.5s ease-in-out, border-radius 1s ease-in-out;
 }
 
 .nav-logo {
@@ -80,6 +81,7 @@ a {
 #logo1 {
   display: block;
   order: -1;
+  transition: display 1s linear 1s;
 }
 
 #logo2 {
@@ -111,10 +113,6 @@ a {
   order: 1;
 }
 
-.nav-toggle:checked ~ .nav-logo-outer #cursor {
-  order: 0;
-}
-
 @keyframes blink {
   0% {
     opacity: 1;
@@ -142,7 +140,7 @@ a {
   transform: scale(0, 0);
   transform-origin: top;
   opacity: 0;
-  transition: transform 0.4s ease-in-out, opacity 0.2s ease-in-out;
+  transition: transform 0.4s ease-in-out 1s, opacity 0.2s ease-in-out 1s;
 }
 
 .nav-list-item {
@@ -164,13 +162,13 @@ a {
 .nav-toggle:checked ~ .nav-list .nav-list-item {
   transform: scale(1, 1);
   display: flex;
-  transition: transform 0.4s ease-in-out, opacity 0.2s ease-in-out 0.2s;
+  transition: transform 0.4s ease-in-out 0.5s, opacity 0.2s ease-in-out 0.3s;
 }
 
 .nav-toggle:checked ~ .nav-list {
   transform: scale(1, 1);
   opacity: 1;
-  transition: transform 0.4s ease-in-out, opacity 0.2s ease-in-out 0.2s;
+  transition: transform 0.4s ease-in-out 0.5s, opacity 0.2s ease-in-out 0.3s;
 }
 
 .nav-list-void {
@@ -296,53 +294,6 @@ a {
   background: whitesmoke;
 }
 
-#speechspike {
-  width: 100%;
-}
-
-#topleft {
-  grid-area: topleft;
-}
-
-#topmid {
-  grid-area: topmid;
-}
-
-#topright {
-  grid-area: topright;
-}
-
-#midleft {
-  grid-area: midleft;
-  justify-self: flex-start;
-  min-width: 10vw !important;
-  image-rendering: pixelated;
-}
-
-#middle {
-  grid-area: middle;
-  height: 100%;
-  width: 1fr;
-}
-
-#midright {
-  grid-area: midright;
-}
-
-#botleft {
-  grid-area: botleft;
-}
-
-#botmid {
-  grid-area: botmid;
-  height: 10vw;
-  min-width: 1fr;
-}
-
-#botright {
-  grid-area: botright;
-}
-
 .work-overlay {
   text-align: center;
   color: white;
@@ -388,8 +339,8 @@ a {
 @media only screen and (min-width: 730px) {
   .work-grid {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+
     grid-gap: 1.5em;
     width: 95%;
     height: 95%;
@@ -397,12 +348,12 @@ a {
   }
 
   #work-inner1 {
-    grid-area: span 2 / span 3;
+    grid-area: span 3 / span 3;
     background-image: url("./images/screengrabs/weatherio.png");
   }
 
   #work-inner2 {
-    grid-area: span 2 / span 2;
+    grid-area: span 3 / span 2;
   }
 
   #work-inner3 {
@@ -410,19 +361,19 @@ a {
   }
 
   #work-inner4 {
-    grid-area: span 3 / span 2;
+    grid-area: span 3 / span 3;
   }
 
   #work-inner5 {
-    grid-area: span 1 / span 3;
+    grid-area: span 2 / span 5;
   }
 
   #work-inner6 {
-    grid-area: span 2 / span 2;
+    grid-area: span 3 / span 2;
   }
 
   #work-inner7 {
-    grid-area: span 2 / span 3;
+    grid-area: span 3 / span 3;
   }
 
   .nav {
@@ -483,11 +434,26 @@ a {
 }
 
 @media only screen and (min-width: 990px) {
-  .nav-logo {
+  .work-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-gap: 1.5em;
+    width: 95%;
+    height: 95%;
+    /* margin-top: 5vh; */
+  }
+  #work-inner4 {
+    grid-area: span 4 / span 2;
+  }
+  #work-inner5 {
+    grid-area: span 1 / span 3;
+  }
+  nav-logo {
     margin: 4px;
   }
 }
 
 .tech-badge {
-  height: 70px;
+  width: 4em;
 }
