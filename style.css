@@ -252,15 +252,14 @@ a {
 }
 
 .work-grid-inner {
+  height: 100%;
   background: #4a4a4a;
-  grid-area: span 1 / span 1;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   overflow: hidden;
   padding: 0px !important;
   background-size: cover;
   background-repeat: no-repeat;
   background-origin: center;
-  text-decoration: none !important;
 }
 .video-wrapper {
   overflow: hidden;
@@ -304,7 +303,7 @@ a {
   align-items: center;
   justify-content: space-between;
   padding: 5px;
-  transform: translateX(100%);
+  transform: translateY(-100%);
   width: 100%;
   height: min-content;
   background: rgba(0, 0, 0, 0.6);
@@ -319,7 +318,7 @@ a {
   margin: 0px;
 }
 .work-grid-inner:hover .work-overlay {
-  transform: translateX(0%);
+  transform: translateY(0%);
 }
 
 .tech-stack {
@@ -393,11 +392,11 @@ a {
   }
 
   #work-inner6 {
-    grid-area: span 3 / span 2;
+    grid-area: span 4 / span 2;
   }
 
   #work-inner7 {
-    grid-area: span 3 / span 3;
+    grid-area: span 2 / span 3;
   }
 
   .nav {
@@ -459,6 +458,7 @@ a {
 
 video {
   position: fixed;
+
   width: 100%;
   min-height: 100%;
   min-width: 100%;
@@ -478,7 +478,7 @@ video {
     grid-area: span 4 / span 2;
   }
   #work-inner5 {
-    grid-area: span 1 / span 3;
+    grid-area: span 2 / span 3;
   }
   nav-logo {
     margin: 4px;
