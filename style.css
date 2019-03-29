@@ -326,7 +326,7 @@ a {
 }
 
 #work-inner1 {
-  background-image: url("./images/screengrabs/weatherio.png");
+  /* background-image: url("./images/screengrabs/weatherio.png"); */
 }
 
 #work-inner2 {
@@ -372,7 +372,7 @@ a {
 
   #work-inner1 {
     grid-area: span 3 / span 3;
-    background-image: url("./images/screengrabs/weatherio.png");
+    /* background-image: url("./images/screengrabs/weatherio.png"); */
   }
 
   #work-inner2 {
