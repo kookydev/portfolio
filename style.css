@@ -78,6 +78,7 @@ a {
   align-items: center;
   justify-content: center;
 }
+
 #logo1 {
   display: block;
   order: -1;
@@ -159,13 +160,14 @@ a {
   transition: height 1.5s ease-in-out, opacity 0.5s ease-in-out 0.2s,
     width 0.5s ease-in-out 1s, transform 0.2s linear 0.5s;
 }
-.nav-toggle:checked ~ .nav-list .nav-list-item {
+
+.nav-toggle:checked~.nav-list .nav-list-item {
   transform: scale(1, 1);
   display: flex;
   transition: transform 0.4s ease-in-out 0.5s, opacity 0.2s ease-in-out 0.3s;
 }
 
-.nav-toggle:checked ~ .nav-list {
+.nav-toggle:checked~.nav-list {
   transform: scale(1, 1);
   opacity: 1;
   transition: transform 0.4s ease-in-out 0.5s, opacity 0.2s ease-in-out 0.3s;
@@ -179,7 +181,7 @@ a {
   list-style: none;
 }
 
-.nav-toggle:checked ~ .nav-list .nav-list-void {
+.nav-toggle:checked~.nav-list .nav-list-void {
   display: block;
 }
 
@@ -188,7 +190,7 @@ a {
   border-radius: 0px 0px 15px 0px;
 }
 
-.nav-toggle:checked ~ li {
+.nav-toggle:checked~li {
   height: 0;
   opacity: 0;
   transform: translateX(-1000px);
@@ -197,12 +199,15 @@ a {
 .nav a {
   color: whitesmoke;
 }
-.nav-toggle:checked ~ nav {
+
+.nav-toggle:checked~nav {
   opacity: 1;
 }
+
 .nav-toggle {
   opacity: 0;
 }
+
 .about {
   min-height: 100vh;
   width: 100%;
@@ -261,8 +266,27 @@ a {
   background-repeat: no-repeat;
   background-origin: center;
 }
+
 .video-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
+}
+
+.video-wrapper video {
+  min-width: 100%;
+  min-height: 100%;
+
+
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 .tilt-left {
@@ -310,13 +334,16 @@ a {
   transition: transform 0.5s ease-in-out;
   text-shadow: #000;
 }
+
 .work-overlay h1 {
   font-size: 2.5em;
 }
+
 .work-overlay p {
   font-size: 1.5em;
   margin: 0px;
 }
+
 .work-grid-inner:hover .work-overlay {
   transform: translateY(0%);
 }
@@ -325,27 +352,19 @@ a {
   justify-self: center;
 }
 
-#work-inner1 {
-  /* background-image: url("./images/screengrabs/weatherio.png"); */
-}
+#work-inner1 {}
 
-#work-inner2 {
-}
+#work-inner2 {}
 
-#work-inner3 {
-}
+#work-inner3 {}
 
-#work-inner4 {
-}
+#work-inner4 {}
 
-#work-inner5 {
-}
+#work-inner5 {}
 
-#work-inner6 {
-}
+#work-inner6 {}
 
-#work-inner7 {
-}
+#work-inner7 {}
 
 @keyframes logo-in {
   to {
@@ -456,13 +475,6 @@ a {
   }
 }
 
-video {
-  position: fixed;
-
-  width: 100%;
-  min-height: 100%;
-  min-width: 100%;
-}
 
 @media only screen and (min-width: 990px) {
   .work-grid {
@@ -474,12 +486,15 @@ video {
     height: 95%;
     /* margin-top: 5vh; */
   }
+
   #work-inner4 {
     grid-area: span 4 / span 2;
   }
+
   #work-inner5 {
     grid-area: span 2 / span 3;
   }
+
   nav-logo {
     margin: 4px;
   }
