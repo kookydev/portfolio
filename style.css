@@ -330,7 +330,7 @@ a {
   transform: translateY(-100%);
   width: 100%;
   height: min-content;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.75);
   transition: transform 0.5s ease-in-out;
   text-shadow: #000;
 }
